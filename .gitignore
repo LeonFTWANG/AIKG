@@ -62,3 +62,10 @@ Thumbs.db
 # Neo4j
 data/
 
+# Testing & Linting
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
