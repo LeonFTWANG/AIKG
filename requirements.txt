@@ -1,0 +1,50 @@
+# Web框架
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# 爬虫相关
+scrapy==2.11.0
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+selenium==4.15.2
+playwright==1.40.0
+
+# Neo4j图数据库
+neo4j==5.14.1
+py2neo==2021.2.4
+
+# LLM和AI
+openai>=1.6.1
+
+
+# Dify客户端
+httpx==0.25.2
+
+# 数据处理
+pandas==2.1.3
+numpy==1.26.2
+
+# 工具库
+python-dotenv==1.0.0
+pyyaml==6.0.1
+loguru==0.7.2
+
+# CORS支持
+python-multipart==0.0.6
+
+# 数据验证
+validators==0.22.0
+
+# 调度任务
+apscheduler==3.10.4
+
+# 数据库连接池
+redis==5.0.1
+
+# 测试
+pytest==7.4.3
+pytest-asyncio==0.21.1
+

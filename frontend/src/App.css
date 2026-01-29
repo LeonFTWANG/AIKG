@@ -1,0 +1,143 @@
+.app-container {
+  min-height: 100vh;
+}
+
+.page-content {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+}
+
+.card-container {
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 24px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1890ff;
+  margin: 8px 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+.search-box {
+  margin-bottom: 24px;
+}
+
+.knowledge-card {
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.knowledge-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.tag-container {
+  margin-top: 8px;
+}
+
+.graph-controls {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 4px;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 150px);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.message {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.message-user {
+  background: #e6f7ff;
+  text-align: right;
+}
+
+.message-assistant {
+  background: #f0f0f0;
+}
+
+.chat-input-container {
+  background: white;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.related-knowledge {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fafafa;
+  border-left: 3px solid #1890ff;
+  border-radius: 4px;
+}
+
+.severity-HIGH {
+  color: #ff4d4f;
+}
+
+.severity-CRITICAL {
+  color: #cf1322;
+  font-weight: bold;
+}
+
+.severity-MEDIUM {
+  color: #fa8c16;
+}
+
+.severity-LOW {
+  color: #52c41a;
+}
+
+.lab-card {
+  margin-bottom: 16px;
+}
+
+.lab-free {
+  color: #52c41a;
+}
+
+.lab-paid {
+  color: #faad14;
+}
+
+/* 对话列表项悬停效果 */
+.conversation-item .delete-btn {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.conversation-item:hover .delete-btn {
+  opacity: 1 !important;
+}
+
+.conversation-item .delete-btn:hover {
+  background-color: #fff1f0 !important;
+}
+

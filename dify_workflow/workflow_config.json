@@ -1,0 +1,67 @@
+{
+  "workflow_name": "Security Knowledge Filter",
+  "description": "筛选和分类安全知识点的Dify工作流配置",
+  "version": "1.0.0",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "name": "开始",
+      "description": "接收知识点输入"
+    },
+    {
+      "id": "llm_classify",
+      "type": "llm",
+      "name": "知识分类",
+      "model": "gpt-4",
+      "prompt": "请分析以下安全知识点并进行分类：\n\n{{query}}\n\n返回JSON格式，包含：\n- category: 主要分类\n- sub_category: 子分类\n- tags: 标签列表\n- severity: 严重程度\n- difficulty: 学习难度\n- is_relevant: 是否相关\n- summary: 简短总结",
+      "temperature": 0.3
+    },
+    {
+      "id": "filter",
+      "type": "condition",
+      "name": "相关性过滤",
+      "condition": "{{llm_classify.is_relevant}} == true"
+    },
+    {
+      "id": "output",
+      "type": "end",
+      "name": "输出结果"
+    }
+  ],
+  "edges": [
+    {
+      "source": "start",
+      "target": "llm_classify"
+    },
+    {
+      "source": "llm_classify",
+      "target": "filter"
+    },
+    {
+      "source": "filter",
+      "target": "output",
+      "condition": "true"
+    }
+  ],
+  "variables": {
+    "input": {
+      "query": "string"
+    },
+    "output": {
+      "category": "string",
+      "sub_category": "string",
+      "tags": "array",
+      "severity": "string",
+      "difficulty": "string",
+      "is_relevant": "boolean",
+      "summary": "string"
+    }
+  },
+  "notes": [
+    "本工作流用于自动筛选和分类安全知识点",
+    "使用LLM进行智能分类和标注",
+    "可以通过Dify平台进行可视化编辑和调整"
+  ]
+}
+
