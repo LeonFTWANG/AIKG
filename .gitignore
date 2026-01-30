@@ -26,7 +26,7 @@ wheels/
 # Environment
 .env
 .venv
-config/.env
+
 
 # Logs
 *.log
